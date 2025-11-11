@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(120deg, #f8fafc 0%, #e0eafc 100%);
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.MuiPaper-root {
+  border-radius: 18px !important;
+  box-shadow: 0 4px 24px 0 rgba(120, 120, 180, 0.08) !important;
+  background: #f9f9fb !important;
+}
+
+.MuiTableContainer-root {
+  background: #f6f8fa !important;
+}
+
+.MuiTableCell-root {
+  font-size: 1rem;
+  border-bottom: 1px solid #e3e6f0 !important;
+}
+
+.MuiTypography-h4 {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: #4a4a4a;
+  letter-spacing: 0.5px;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

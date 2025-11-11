@@ -1,0 +1,209 @@
+{
+  "criteria": [
+    "Weather",
+    "Work-Life Balance",
+    "Safety",
+    "Things to Do",
+    "Savings / Cost",
+    "Remote Work",
+    "Living Space",
+    "Work Stress",
+    "Proximity to Family",
+    "Academia for Children",
+    "Taxation",
+    "Govt Facilities",
+    "Career Growth"
+  ],
+  "cities": [
+    {
+      "name": "Johannesburg, SA",
+      "country": "South Africa",
+      "metrics": {
+        "Weather": 8,
+        "Work-Life Balance": 6,
+        "Safety": 4,
+        "Things to Do": 6,
+        "Savings / Cost": 8,
+        "Remote Work": 7,
+        "Living Space": 10,
+        "Work Stress": 7,
+        "Proximity to Family": 5,
+        "Academia for Children": 6,
+        "Taxation": 7,
+        "Govt Facilities": 5,
+        "Career Growth": 7
+      }
+    },
+    {
+      "name": "Lisbon / Cascais, Portugal",
+      "country": "Portugal",
+      "metrics": {
+        "Weather": 9,
+        "Work-Life Balance": 8,
+        "Safety": 7,
+        "Things to Do": 8,
+        "Savings / Cost": 7,
+        "Remote Work": 8,
+        "Living Space": 7,
+        "Work Stress": 6,
+        "Proximity to Family": 6,
+        "Academia for Children": 7,
+        "Taxation": 6,
+        "Govt Facilities": 7,
+        "Career Growth": 6
+      }
+    },
+    {
+      "name": "Auckland / Wellington, NZ",
+      "country": "New Zealand",
+      "metrics": {
+        "Weather": 8,
+        "Work-Life Balance": 9,
+        "Safety": 9,
+        "Things to Do": 9,
+        "Savings / Cost": 6,
+        "Remote Work": 8,
+        "Living Space": 8,
+        "Work Stress": 5,
+        "Proximity to Family": 4,
+        "Academia for Children": 9,
+        "Taxation": 6,
+        "Govt Facilities": 9,
+        "Career Growth": 7
+      }
+    },
+    {
+      "name": "Brisbane / Gold Coast, Australia",
+      "country": "Australia",
+      "metrics": {
+        "Weather": 9,
+        "Work-Life Balance": 8,
+        "Safety": 8,
+        "Things to Do": 9,
+        "Savings / Cost": 6,
+        "Remote Work": 8,
+        "Living Space": 8,
+        "Work Stress": 5,
+        "Proximity to Family": 4,
+        "Academia for Children": 9,
+        "Taxation": 6,
+        "Govt Facilities": 9,
+        "Career Growth": 7
+      }
+    },
+    {
+      "name": "Singapore",
+      "country": "Singapore",
+      "metrics": {
+        "Weather": 8,
+        "Work-Life Balance": 7,
+        "Safety": 10,
+        "Things to Do": 7,
+        "Savings / Cost": 5,
+        "Remote Work": 9,
+        "Living Space": 4,
+        "Work Stress": 8,
+        "Proximity to Family": 5,
+        "Academia for Children": 9,
+        "Taxation": 8,
+        "Govt Facilities": 10,
+        "Career Growth": 9
+      }
+    },
+    {
+      "name": "Bangalore, India",
+      "country": "India",
+      "metrics": {
+        "Weather": 8,
+        "Work-Life Balance": 6,
+        "Safety": 6,
+        "Things to Do": 7,
+        "Savings / Cost": 8,
+        "Remote Work": 8,
+        "Living Space": 7,
+        "Work Stress": 7,
+        "Proximity to Family": 9,
+        "Academia for Children": 7,
+        "Taxation": 7,
+        "Govt Facilities": 6,
+        "Career Growth": 9
+      }
+    },
+    {
+      "name": "Dubai, UAE",
+      "country": "UAE",
+      "metrics": {
+        "Weather": 7,
+        "Work-Life Balance": 7,
+        "Safety": 9,
+        "Things to Do": 8,
+        "Savings / Cost": 7,
+        "Remote Work": 8,
+        "Living Space": 7,
+        "Work Stress": 7,
+        "Proximity to Family": 6,
+        "Academia for Children": 8,
+        "Taxation": 10,
+        "Govt Facilities": 9,
+        "Career Growth": 8
+      }
+    },
+    {
+      "name": "London, UK",
+      "country": "UK",
+      "metrics": {
+        "Weather": 5,
+        "Work-Life Balance": 6,
+        "Safety": 7,
+        "Things to Do": 10,
+        "Savings / Cost": 4,
+        "Remote Work": 8,
+        "Living Space": 5,
+        "Work Stress": 7,
+        "Proximity to Family": 5,
+        "Academia for Children": 9,
+        "Taxation": 5,
+        "Govt Facilities": 8,
+        "Career Growth": 9
+      }
+    },
+    {
+      "name": "Amsterdam, Netherlands",
+      "country": "Netherlands",
+      "metrics": {
+        "Weather": 6,
+        "Work-Life Balance": 9,
+        "Safety": 9,
+        "Things to Do": 8,
+        "Savings / Cost": 5,
+        "Remote Work": 9,
+        "Living Space": 6,
+        "Work Stress": 5,
+        "Proximity to Family": 6,
+        "Academia for Children": 9,
+        "Taxation": 5,
+        "Govt Facilities": 9,
+        "Career Growth": 7
+      }
+    },
+    {
+      "name": "San Francisco / Bay Area, CA",
+      "country": "USA",
+      "metrics": {
+        "Weather": 8,
+        "Work-Life Balance": 5,
+        "Safety": 6,
+        "Things to Do": 9,
+        "Savings / Cost": 3,
+        "Remote Work": 9,
+        "Living Space": 4,
+        "Work Stress": 8,
+        "Proximity to Family": 4,
+        "Academia for Children": 9,
+        "Taxation": 6,
+        "Govt Facilities": 7,
+        "Career Growth": 10
+      }
+    }
+  ]
+}

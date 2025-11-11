@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-  "build": "tsc -b && vite build --base=/green-grass-picker/",
+    "build": "tsc -b && vite build --base=/green-grass-picker/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -14,6 +14,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@hello-pangea/dnd": "^18.0.1",
+    "@mui/icons-material": "^7.3.5",
     "@mui/material": "^7.3.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

@@ -19,6 +19,19 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HomeIcon from "@mui/icons-material/Home";
 import ChildCareIcon from "@mui/icons-material/ChildCare";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import {
+  userFormCardStyles,
+  headerBoxStyles,
+  titleStyles,
+  chipStyles,
+  expandIconStyles,
+  inputContainerStyles,
+  inputRowStyles,
+  textFieldRootStyles,
+  switchContainerStyles,
+  switchStyles,
+  switchLabelBoxStyles,
+} from "../styles/userFormStyles";
 
 export interface UserInputs {
   currentLocation: string;
@@ -102,56 +115,18 @@ export const UserInputForm: React.FC<UserInputFormProps> = ({ inputs, onChange }
   };
 
   return (
-    <Card
-      elevation={0}
-      sx={{
-        width: "100%",
-        background: (theme) => theme.palette.background.paper,
-        borderRadius: 3,
-        boxShadow: "0 1px 8px rgba(163, 201, 199, 0.08)",
-        border: "1px solid",
-        borderColor: (theme) => theme.palette.primary.light,
-        mb: 3,
-      }}
-    >
+    <Card elevation={0} sx={userFormCardStyles}>
       <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            mb: expanded ? 2 : 0,
-          }}
-        >
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 600,
-              color: "#4a4a4a",
-              letterSpacing: 0.5,
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-            }}
-          >
+        <Box sx={{ ...headerBoxStyles, mb: expanded ? 2 : 0 }}>
+          <Typography variant="h6" sx={titleStyles}>
             Your Details
-            <Chip
-              label="Personalize"
-              size="small"
-              sx={{
-                background: (theme) => theme.palette.primary.light,
-                color: "#4a4a4a",
-                fontWeight: 500,
-                fontSize: "0.7rem",
-              }}
-            />
+            <Chip label="Personalize" size="small" sx={chipStyles} />
           </Typography>
           <IconButton
             onClick={() => setExpanded(!expanded)}
             size="small"
             sx={{
-              color: (theme) => theme.palette.primary.main,
-              transition: "transform 0.3s",
+              ...expandIconStyles,
               transform: expanded ? "rotate(0deg)" : "rotate(180deg)",
             }}
           >
@@ -160,8 +135,8 @@ export const UserInputForm: React.FC<UserInputFormProps> = ({ inputs, onChange }
         </Box>
 
         <Collapse in={expanded}>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
-            <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, gap: 2.5 }}>
+          <Box sx={inputContainerStyles}>
+            <Box sx={inputRowStyles}>
               <Autocomplete
                 fullWidth
                 freeSolo
@@ -188,18 +163,7 @@ export const UserInputForm: React.FC<UserInputFormProps> = ({ inputs, onChange }
                         </>
                       ),
                     }}
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        borderRadius: 2,
-                        background: "#fafafa",
-                        "&:hover fieldset": {
-                          borderColor: (theme) => theme.palette.primary.main,
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: (theme) => theme.palette.primary.main,
-                        },
-                      },
-                    }}
+                    sx={textFieldRootStyles}
                   />
                 )}
               />
@@ -229,18 +193,7 @@ export const UserInputForm: React.FC<UserInputFormProps> = ({ inputs, onChange }
                         </>
                       ),
                     }}
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        borderRadius: 2,
-                        background: "#fafafa",
-                        "&:hover fieldset": {
-                          borderColor: (theme) => theme.palette.primary.main,
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: (theme) => theme.palette.primary.main,
-                        },
-                      },
-                    }}
+                    sx={textFieldRootStyles}
                   />
                 )}
               />
@@ -267,49 +220,19 @@ export const UserInputForm: React.FC<UserInputFormProps> = ({ inputs, onChange }
                     </InputAdornment>
                   ),
                 }}
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    borderRadius: 2,
-                    background: "#fafafa",
-                    "&:hover fieldset": {
-                      borderColor: (theme) => theme.palette.primary.main,
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: (theme) => theme.palette.primary.main,
-                    },
-                  },
-                }}
+                sx={textFieldRootStyles}
               />
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  flex: 1,
-                  px: 2,
-                  py: 1,
-                  borderRadius: 2,
-                  background: "#fafafa",
-                  border: "1px solid",
-                  borderColor: (theme) => theme.palette.divider,
-                }}
-              >
+              <Box sx={switchContainerStyles}>
                 <FormControlLabel
                   control={
                     <Switch
                       checked={inputs.hasChildren}
                       onChange={handleChange("hasChildren")}
-                      sx={{
-                        "& .MuiSwitch-switchBase.Mui-checked": {
-                          color: (theme) => theme.palette.primary.main,
-                        },
-                        "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
-                          backgroundColor: (theme) => theme.palette.primary.main,
-                        },
-                      }}
+                      sx={switchStyles}
                     />
                   }
                   label={
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                    <Box sx={switchLabelBoxStyles}>
                       <ChildCareIcon sx={{ color: (theme) => theme.palette.info.main }} />
                       <Typography variant="body2" sx={{ fontWeight: 500 }}>
                         Have Children

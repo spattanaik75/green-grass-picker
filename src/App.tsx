@@ -8,6 +8,19 @@ import { UserInputForm } from "./components/UserInputForm";
 import type { UserInputs } from "./components/UserInputForm";
 import type { City } from "./components/CityRankingTable";
 import cityData from "./data.json";
+import {
+  containerStyles,
+  mainBoxStyles,
+  headerPaperStyles,
+  headerTitleStyles,
+  headerSubtitleStyles,
+  preferenceSelectorCardStyles,
+  preferenceSelectorCardContentStyles,
+  sectionTitleStyles,
+  footerBoxStyles,
+  footerPrimaryTextStyles,
+  footerSecondaryTextStyles,
+} from "./styles/appStyles";
 
 const CRITERIA: string[] = cityData.criteria;
 const CITY_DATA: City[] = cityData.cities.map((city) => ({ ...city, total: 0 }));
@@ -49,30 +62,14 @@ const App: React.FC = () => {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="lg" sx={{ py: { xs: 2, sm: 4 } }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+      <Container maxWidth="lg" sx={containerStyles}>
+        <Box sx={mainBoxStyles}>
           {/* Header Section */}
-          <Paper elevation={0} sx={{
-            background: (theme) => `linear-gradient(135deg, ${theme.palette.primary.light} 0%, ${theme.palette.secondary.light} 100%)`,
-            borderRadius: 4,
-            p: { xs: 3, sm: 4 },
-            boxShadow: '0 4px 20px rgba(163, 201, 199, 0.15)',
-            textAlign: 'center',
-          }}>
-            <Typography variant="h3" sx={{ 
-              fontWeight: 700, 
-              color: "#2d3a3a", 
-              mb: 1, 
-              letterSpacing: 1.5,
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }
-            }}>
+          <Paper elevation={0} sx={headerPaperStyles}>
+            <Typography variant="h3" sx={headerTitleStyles}>
               🌱 Green Grass Picker
             </Typography>
-            <Typography variant="subtitle1" sx={{ 
-              color: "#4a4a4a", 
-              fontWeight: 400,
-              fontSize: { xs: '0.9rem', sm: '1rem' }
-            }}>
+            <Typography variant="subtitle1" sx={headerSubtitleStyles}>
               Find your perfect city to live in, tailored to your preferences
             </Typography>
           </Paper>
@@ -81,43 +78,26 @@ const App: React.FC = () => {
           <UserInputForm inputs={userInputs} onChange={setUserInputs} />
 
           {/* Preference Selector Section */}
-          <Card elevation={0} sx={{ 
-            background: (theme) => theme.palette.background.paper, 
-            borderRadius: 3, 
-            boxShadow: '0 2px 12px rgba(163, 201, 199, 0.10)',
-            border: '1px solid',
-            borderColor: (theme) => theme.palette.primary.light
-          }}>
-            <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
+          <Card elevation={0} sx={preferenceSelectorCardStyles}>
+            <CardContent sx={preferenceSelectorCardContentStyles}>
               <PreferenceSelector preferences={preferences} onChange={setPreferences} />
             </CardContent>
           </Card>
 
           {/* Results Section */}
           <Box>
-            <Typography variant="h5" sx={{ 
-              fontWeight: 600, 
-              color: "#4a4a4a", 
-              mb: 2,
-              display: 'flex',
-              alignItems: 'center',
-              gap: 1
-            }}>
+            <Typography variant="h5" sx={sectionTitleStyles}>
               🏆 Your Personalized City Rankings
             </Typography>
             <CityRankingTable cities={rankedCities} criteria={CRITERIA} preferenceOrder={preferences} />
           </Box>
 
           {/* Footer */}
-          <Box sx={{ 
-            textAlign: 'center', 
-            py: 3,
-            mt: 2
-          }}>
-            <Typography variant="body2" sx={{ color: "#6a7ba2", mb: 1 }}>
+          <Box sx={footerBoxStyles}>
+            <Typography variant="body2" sx={footerPrimaryTextStyles}>
               Made with ❤️ | Click column headers to sort | Drag preferences to reorder
             </Typography>
-            <Typography variant="caption" sx={{ color: "#a0a0a0" }}>
+            <Typography variant="caption" sx={footerSecondaryTextStyles}>
               Data is for reference only. Actual experiences may vary.
             </Typography>
           </Box>
